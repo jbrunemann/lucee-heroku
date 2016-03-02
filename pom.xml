@@ -160,7 +160,7 @@
             <phase>generate-sources</phase>
             <configuration>
               <target>
-                <echo file="./bin/${APP_NAME}" message="java -jar target/webapp-runner.jar --port ${PORT} webroot" />
+                <echo file="./bin/${APP_NAME}" message="java -jar /opt/${APP_NAME}/target/webapp-runner.jar --port ${PORT} --temp-directory "/opt/${APP_NAME}/tmp/" /opt/${APP_NAME}/webroot" />
                 <chmod file="./bin/${APP_NAME}" perm="+x"/>
               </target>
             </configuration>
